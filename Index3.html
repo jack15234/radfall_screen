@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Radfall Discription</title>
+<link rel="stylesheet" href="file:///C:/Users/jackt/OneDrive%20-%20Lincoln%20High%20School/Documents/JDTY/WebPages/mystyle/style.css"
+</head>
+<body>
+
+
+<!-- Radfall Loading Screen -->
+<div id="loading-screen">
+  <div class="loader-background"></div>
+  <div class="loader-content">
+    <h1 class="loader-logo">RADFALL</h1>
+    <p class="loader-tip" id="loaderTip">Prepare to enter the dead zones...</p>
+
+    <!-- Path selection -->
+    <div class="path-grid">
+      <button class="path-card" data-path="survivor" aria-pressed="false">
+        <div class="icon">🛠️</div>
+        <h3>Survivor</h3>
+        <p class="short">Crafting & endurance-focused.</p>
+        <ul class="perks">
+          <li>Better crafting yields</li>
+          <li>Radiation resistance +5%</li>
+          <li>Find more resources</li>
+        </ul>
+      </button>
+
+      <button class="path-card" data-path="scout" aria-pressed="false">
+        <div class="icon">🧭</div>
+        <h3>Scout</h3>
+        <p class="short">Exploration & stealth.</p>
+        <ul class="perks">
+          <li>Faster movement</li>
+          <li>See hidden POIs</li>
+          <li>Lower detection risk</li>
+        </ul>
+      </button>
+
+      <button class="path-card" data-path="hunter" aria-pressed="false">
+        <div class="icon">⚔️</div>
+        <h3>Hunter</h3>
+        <p class="short">Combat-oriented.</p>
+        <ul class="perks">
+          <li>Higher melee damage</li>
+          <li>Better Echoform drops</li>
+          <li>Combat advantage at close range</li>
+        </ul>
+      </button>
+    </div>
+
+    <div class="chosen-display">
+      <p>Selected path: <strong id="chosenPath">None</strong></p>
+      <button id="startGameBtn" class="btn">Enter the Dead Zones</button>
+    </div>
+  </div>
+</div>
+
+<nav>
+  <div class="nav-container">
+    <div class="logo">☢ RADFALL</div>
+    <div class="menu-toggle">☰</div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#world">World</a></li>
+      <li><a href="#engine">Unreal</a></li>
+      <li><a href="#zones">Zones</a></li>
+      <li><a href="#bestiary">Echoforms</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#timeline">Timeline</a></li>
+      <li><a href="#dev">Developer</a></li>
+      <li><a href="#story">Story</a></li>
+      <li><a href="https://store.steampowered.com/" target="_blank" class="steam-btn-navbar">🎮 Wishlist on Steam</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero fade-section" id="hero">
+  <h1>Radfall</h1>
+  <p>A world reshaped by a mutated cure — where humanity became the Echoforms.</p>
+</header>
+
+<section id="world" class="fade-section">
+  <h2>The World of Radfall</h2>
+  <p>Radfall takes place after the 2029 nuclear plant explosion. Project Helix attempted to slow aging but mutated into the Echoforms virus. Humanity is changed, and the world is a dangerous, irradiated landscape.</p>
+</section>
+
+<section id="engine" class="fade-section">
+  <h2>Building Radfall in Unreal Engine</h2>
+  <p>Entirely Blueprint-based, Radfall’s systems include movement, AI, quests, crafting, and radiation survival mechanics — no C++ used.</p>
+</section>
+
+<section id="zones" class="fade-section">
+  <h2>The Three Radiation Zones</h2>
+  <div class="zones-grid">
+    <div class="card fringe"><h3>The Fringe</h3><p>Low–Moderate threat. Lurkers, Shriekers, Wailers.</p></div>
+    <div class="card deadlight"><h3>Deadlight Fields</h3><p>High threat. Striders, Bleachers, Sirens, The Choir.</p></div>
+    <div class="card core"><h3>The Core</h3><p>Maximum threat. Revenants, Cradleborn, Dr. Kryne.</p></div>
+  </div>
+</section>
+
+<section id="bestiary" class="fade-section">
+  <h2>Echoform Bestiary</h2>
+  <div class="bestiary-grid">
+    <div class="card"><h3>Lurker</h3><p>Silent, stalks victims, hides in shadows.</p></div>
+    <div class="card"><h3>Shrieker</h3><p>Piercing cries attract others.</p></div>
+    <div class="card"><h3>Wailer</h3><p>Twisted screams disorient survivors.</p></div>
+    <div class="card"><h3>Bleacher</h3><p>Radiation-bleached skin, relentless.</p></div>
+    <div class="card"><h3>Strider</h3><p>Fast, agile, hunts in packs.</p></div>
+    <div class="card"><h3>Sirens</h3><p>Manipulate sound to confuse targets.</p></div>
+    <div class="card"><h3>The Choir</h3><p>Group echoform, coordinated screams.</p></div>
+    <div class="card"><h3>Revenant</h3><p>Remembers fragments of its past, intelligent predator.</p></div>
+    <div class="card"><h3>Cradleborn</h3><p>Born directly from Core radiation, deadly.</p></div>
+  </div>
+</section>
+
+<section id="features" class="fade-section">
+  <h2>Game Features</h2>
+  <ul>
+    <li>Blueprint-only development</li>
+    <li>Open radiation world</li>
+    <li>Dynamic Echoform AI</li>
+    <li>Crafting & survival mechanics</li>
+    <li>Radiation system & zones</li>
+    <li>Level-based progression</li>
+    <li>Story-driven missions</li>
+  </ul>
+  <section id="features">
+  <h2 class="section-title">Gameplay Features</h2>
+
+  <div class="features-grid">
+    <div class="feature-card">
+      <h3>Survival Mechanics</h3>
+      <p>Manage hunger, stamina, radiation, weather exposure, and hostile environments.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Crafting System</h3>
+      <p>Build tools, weapons, gear, and base upgrades using materials found in the wild.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Leveling & Progression</h3>
+      <p>Earn XP, unlock new areas, learn abilities, and upgrade your survivor build.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Stealth & Exploration</h3>
+      <p>Stay hidden from Echoforms, sneak through ruins, and uncover lost secrets.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Combat System</h3>
+      <p>Fight Echoforms with melee, crafted weapons, and tactical survival tools.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Radiation Zones</h3>
+      <p>Enter The Fringe, Deadlight Fields, and The Core—each with rising threat levels.</p>
+    </div>
+  </div>
+</section>
+<section id="choose-path" class="path-container">
+  <h2 class="path-title">Choose Your Path</h2>
+
+  <div class="path-grid">
+    <button class="path-card" data-path="survivor" aria-pressed="false">
+      <div class="icon">🛠️</div>
+      <h3>Survivor</h3>
+      <p class="short">Crafting & endurance-focused.</p>
+      <ul class="perks">
+        <li>Better crafting yields</li>
+        <li>Radiation resistance +5%</li>
+        <li>Find more resources</li>
+      </ul>
+    </button>
+
+    <button class="path-card" data-path="scout" aria-pressed="false">
+      <div class="icon">🧭</div>
+      <h3>Scout</h3>
+      <p class="short">Exploration & stealth.</p>
+      <ul class="perks">
+        <li>Faster movement</li>
+        <li>See hidden POIs</li>
+        <li>Lower detection risk</li>
+      </ul>
+    </button>
+
+    <button class="path-card" data-path="hunter" aria-pressed="false">
+      <div class="icon">⚔️</div>
+      <h3>Hunter</h3>
+      <p class="short">Combat-oriented.</p>
+      <ul class="perks">
+        <li>Higher melee damage</li>
+        <li>Better Echoform drops</li>
+        <li>Combat advantage at close range</li>
+      </ul>
+    </button>
+  </div>
+
+  <div class="chosen-display">
+    <p>Selected path: <strong id="chosenPath">None</strong></p>
+  </div>
+</section>
+
+<section id="timeline" class="fade-section">
+  <h2>Timeline of Project Helix</h2>
+  <ul class="timeline">
+    <li class="timeline-item"><strong>2025:</strong> Helix research begins.</li>
+    <li class="timeline-item"><strong>2028:</strong> Human trials start.</li>
+    <li class="timeline-item"><strong>2029:</strong> Nuclear plant explosion mutates the cure.</li>
+    <li class="timeline-item"><strong>2030:</strong> Echoforms spread beyond containment.</li>
+  </ul>
+</section>
+
+<section id="dev" class="fade-section">
+  <h2>About the Developers</h2>
+  <p>Created by Jack McLean and Riley Field, focusing entirely on Blueprint-based systems.</p>
+</section>
+
+<section id="story" class="fade-section">
+  <h2>The Core Story</h2>
+  <p>Alex Rainer searches for his sister after the Helix virus mutates humans into Echoforms — twisted remnants of who they once were. Each Echoform type reflects a different stage of mutation, memory decay, and exposure to radiation. Throughout the game’s journey across the Fringe, Deadlight Fields, and the Core, Alex encounters these creatures in ways that shape the story, the choices he makes, and the emotional weight of every step forward. Their behaviours, sounds, and environments tell as much of the narrative as the characters themselves.</p>
+
+  <h3>The Fringe – Survival’s Edge</h3>
+  <p>In the Fringe, Alex encounters the earliest and least stable mutations: Lurkers, Shriekers, and Wailers. These Echoforms still cling to small fragments of humanity — a twitch, a whisper, or a broken attempt at speech. They are unpredictable, often acting out of fear rather than aggression. Environmental storytelling shows their struggle: claw marks on walls where they tried to escape, abandoned camps torn apart from within, and faint echoes of memories drifting through their cries. Their presence sets the tone for the world: unsettling, tragic, and deeply personal.</p>
+
+  <h3>Deadlight Fields – The Heart of Mutation</h3>
+  <p>As Alex crosses into the Deadlight Fields, the Echoforms become far more dangerous. Bleachers, Striders, Sirens, and the haunting collective known as The Choir dominate the landscape. These creatures are shaped by high radiation zones, causing their bodies to stretch, harden, or merge with bio-reactive growths. Some Echoforms here move with eerie precision, as if still following routines from their past lives — patrolling, guarding, or repeating broken daily habits. Alex discovers recordings and journals describing early encounters with these variants, painting a picture of Project Helix’s collapse and the terror that unfolded. Every encounter forces players to rethink their strategy, as these Echoforms hunt in patterns, communicate through distorted frequencies, and adapt to their environment.</p>
+
+  <h3>The Core – Confronting Kryne</h3>
+  <p>In the Core, the mutation reaches its final, most horrific stage. Revenants and Cradleborn stalk the ruins with purpose, driven by fragmented memories that surface in sudden, chilling moments. Some pause at old laboratory terminals as if remembering their former roles; others react violently to symbols, voices, or objects connected to their past lives. These behaviours add emotional depth to each encounter — they are monsters, but they are also victims of the Helix virus.</p>
+
+  <p>As Alex presses deeper, he learns that Dr. Kryne manipulated the virus’s evolution, creating Echoforms with enhanced senses, protective instincts, or heightened aggression. The Core’s Echoforms guard the final chambers like a distorted reflection of security systems gone wrong. Environmental clues — blood trails, collapsed observation rooms, shattered containment pods — reveal the chaos of the last hours before everything fell apart.</p>
+
+  <p>Within the Core, Alex navigates collapsing laboratories, radiation leaks, and mutated wildlife that adapted alongside the Echoforms. He uncovers secret research notes detailing Project Helix’s true intentions, confronts ethical dilemmas, and battles Echoforms specifically engineered to survive catastrophic radiation levels. The Core challenges both combat skill and moral judgement, leading to multiple endings shaped by how Alex has treated survivors, handled Echoforms, and sought the truth behind the virus. Every step is a final descent into the heart of mutation itself — a place where science, tragedy, and survival collide.</p>
+</section>
+
+  <!-- Follow Me Section -->
+<section id="follow" style="text-align:center; padding:50px 20px; background-color:#111;">
+  <h2 class="section-title">Follow Me</h2>
+  <p>Stay updated on Radfall’s development and join the community:</p>
+  <div style="margin-top:20px;">
+    <a href="https://youtube.com/@Jacybobacky1RadFall" target="_blank" class="follow-btn">YouTube</a>
+    <a href="https://www.tiktok.com/@radfallonsteam" target="_blank" class="follow-btn">TikTok</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Radfall Development</p>
+  <p id="footer-steam" onclick="window.open('https://store.steampowered.com/', '_blank')">🎮 Wishlist on Steam</p>
+</footer>
+
+<script>
+  // Mobile menu toggle
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  menuToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
+
+  // Loading screen
+  window.addEventListener('load', () => document.getElementById('loadingScreen').style.display = 'none');
+
+  // Fade-in sections
+  const fadeSections = document.querySelectorAll('.fade-section');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){ entry.target.classList.add('visible'); }
+      else{ entry.target.classList.remove('visible'); }
+    });
+  }, { threshold: 0.1 });
+  fadeSections.forEach(section => observer.observe(section));
+  
+</script>
+
+<script>
+  const cards = document.querySelectorAll('.path-card');
+  const chosen = document.getElementById('chosenPath');
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      cards.forEach(c => c.setAttribute('aria-pressed', 'false'));
+      card.setAttribute('aria-pressed', 'true');
+
+      chosen.textContent = card.dataset.path.charAt(0).toUpperCase() + card.dataset.path.slice(1);
+    });
+  });
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.path-card');
+  const chosen = document.getElementById('chosenPath');
+  const startBtn = document.getElementById('startGameBtn');
+  let selectedPath = null;
+
+  // Path selection
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      cards.forEach(c => c.setAttribute('aria-pressed', 'false'));
+      card.setAttribute('aria-pressed', 'true');
+      selectedPath = card.dataset.path.charAt(0).toUpperCase() + card.dataset.path.slice(1);
+      chosen.textContent = selectedPath;
+    });
+  });
+
+  // Enter button redirect
+  startBtn.addEventListener('click', () => {
+    if(!selectedPath){
+      alert("Choose a path before entering the Dead Zones!");
+      return;
+    }
+    // Go to your website
+    window.location.href = "https://jack15234.github.io/RadfallDiscription/"
+  });
+});
+</script>
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+<style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0d0d0d;
+      color: #e6e6e6;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      cursor: auto;
+    }
+    h1, h2, h3 { color: #ff4500; }
+
+    /* Navbar */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(20,10,0,0.85);
+      backdrop-filter: blur(6px);
+      padding: 15px 25px;
+      border-bottom: 2px solid #ff4500;
+      box-shadow: 0 0 6px rgba(255,69,0,0.25);
+    }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: auto; }
+    .logo { color: #ff4500; font-size: 1.6rem; font-weight: bold; text-shadow: 0 0 6px #ff4500; }
+    .menu-toggle { display: none; font-size: 1.8rem; cursor: pointer; color: #ffae72; }
+    nav ul { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; }
+
+    nav ul li a {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #ffae72;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.05rem;
+      padding: 6px 10px;
+      border-radius: 6px;
+      transition: 0.3s ease, text-shadow 0.3s ease, transform 0.2s ease;
+    }
+
+    nav ul li a::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #ff4500;
+      border-radius: 2px;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    nav ul li a:hover::after { transform: scaleX(1); }
+    nav ul li a:hover {
+      background-color: rgba(255,69,0,0.12);
+      color: #ffffff;
+      text-shadow: 0 0 6px #ff4500;
+      transform: translateY(-2px);
+    }
+
+    /* Steam button in navbar */
+    .steam-btn-navbar {
+      background-color: #ff4500;
+      color: #0d0d0d;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 10px #ff4500;
+    }
+    .steam-btn-navbar:hover {
+      background-color: #ffae72;
+      text-shadow: 0 0 6px #0d0d0d;
+      box-shadow: 0 0 20px #ff4500, 0 0 35px #ff4500;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 800px) {
+      .menu-toggle { display: block; }
+      .nav-links { display: none; flex-direction: column; background: rgba(0,0,0,0.8); padding: 20px; width: 100%; }
+      .nav-links.active { display: flex; }
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #1a1a1a, #333333); /* placeholder gradient */
+      padding: 140px 20px;
+      text-align: center;
+      animation: heroGlow 2s infinite alternate;
+    }
+    @keyframes heroGlow { 0% { filter: brightness(1); } 50% { filter: brightness(1.05); } 100% { filter: brightness(1); } }
+    .hero h1 { font-size: 3rem; }
+    .hero p { font-size: 1.2rem; max-width: 700px; margin: 10px auto; }
+
+    section { padding: 40px 20px; max-width: 1100px; margin: auto; border-radius: 12px; }
+
+    .bestiary-grid, .zones-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .card {
+      padding: 25px; border-radius: 12px; border: 1px solid #ff4500;
+      box-shadow: 0 0 15px rgba(255,69,0,0.4); transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background-color: rgba(26,26,26,0.9);
+    }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 0 30px rgba(255,69,0,0.7); }
+
+    /* Timeline */
+    .timeline { position: relative; margin: 40px 0; padding-left: 30px; list-style: none; }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 10px;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #ff4500;
+    }
+    .timeline-item { position: relative; margin-bottom: 30px; padding-left: 20px; }
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -14px;
+      top: 0;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #ff4500;
+    }
+
+    .note-box {
+      background-color: rgba(255,69,0,0.1);
+      border-left: 4px solid #ff4500;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 8px;
+      font-style: italic;
+    }
+
+    footer { text-align: center; padding: 20px; background-color: #111; border-top: 2px solid #ff4500; }
+    #footer-steam { cursor: pointer; color: #00adef; font-weight: bold; margin-top: 10px; }
+
+    /* Loading screen */
+    #loadingScreen {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: #0d0d0d; color: #ff4500; display: flex; align-items: center; justify-content: center;
+      font-size: 2rem; z-index: 2000;
+    }
+
+    /* Fade-in sections */
+    .fade-section { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .fade-section.visible { opacity: 1; transform: translateY(0); }
+  
+  .follow-btn {
+    margin: 0 10px;
+    background-color: #ff4c00;
+    color: #000;
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 8px;
+    display: inline-block;
+    text-decoration: none;
+    transition: 0.3s, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(255,76,0,0.5);
+  }
+
+  .follow-btn:hover {
+    background-color: #ffa500;
+    box-shadow: 0 0 20px rgba(255,76,0,0.8), 0 0 40px rgba(255,76,0,0.6);
+    transform: translateY(-2px);
+    color: #000;
+  }
+  /* Choose Your Path Section */
+.path-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.path-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.path-grid {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.path-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 260px;
+  padding: 18px;
+  border-radius: 14px;
+  cursor: pointer;
+  text-align: left;
+  transition: 0.25s;
+  backdrop-filter: blur(6px);
+}
+
+.path-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
+
+.path-card[aria-pressed="true"] {
+  border-color: #ff4444;
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(255,68,68,0.15);
+}
+
+.path-card .icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.path-card h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.path-card p.short {
+  margin: 4px 0 10px;
+  color: #ccc;
+}
+
+.path-card .perks {
+  margin: 8px 0 0 18px;
+  display: none;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.path-card[aria-pressed="true"] .perks {
+  display: block;
+}
+
+.chosen-display {
+  margin-top: 18px;
+  text-align: center;
+  color: #ddd;
+  font-size: 1rem;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .path-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .path-card {
+    width: 90%;
+    max-width: 340px;
+  }
+}
+
+/* Loader overlay */
+#loading-screen {
+  position: fixed;
+  top:0; left:0; width:100%; height:100%;
+  z-index:9999;
+  pointer-events:auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.loader-background {
+  position:absolute;
+  top:0; left:0; width:100%; height:100%;
+  background-color:#0a0a0d;
+  z-index:1;
+}
+
+.loader-content {
+  position:relative;
+  z-index:10; /* ensures all buttons are clickable */
+  text-align:center;
+  width:90%;
+  max-width:800px;
+  color:#fff;
+}
+
+.loader-logo { 
+  font-size:3rem; font-family:'Orbitron',sans-serif; color:#ff4444;
+  letter-spacing:6px; margin-bottom:16px;
+  animation:pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+  0% { text-shadow:0 0 6px #ff4444,0 0 12px #ff4444; }
+  100% { text-shadow:0 0 20px #ff4444,0 0 40px #ff0000; }
+}
+
+.loader-tip { font-family:monospace; opacity:0.8; margin-bottom:30px; }
+
+/* Path grid */
+.path-grid {
+  display:flex; flex-wrap:wrap; justify-content:center; gap:16px;
+  margin-bottom:20px;
+}
+
+.path-card {
+  background: rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.1);
+  width:220px; padding:16px; border-radius:12px;
+  cursor:pointer; text-align:left; transition:0.25s;
+  position: relative; z-index:10; /* clickable */
+}
+
+.path-card:hover { transform:translateY(-6px); box-shadow:0 12px 25px rgba(0,0,0,0.4); }
+.path-card[aria-pressed="true"] {
+  border-color:#ff4444; transform:translateY(-8px) scale(1.02);
+  box-shadow:0 20px 40px rgba(255,68,68,0.15);
+}
+.path-card .perks { display:none; color:#ddd; margin:8px 0 0 18px; font-size:0.9rem; }
+.path-card[aria-pressed="true"] .perks { display:block; }
+
+/* Enter button */
+.btn {
+  margin-top:12px; padding:10px 16px; background:#ff4444; border:none;
+  border-radius:8px; color:#fff; cursor:pointer; font-weight:bold;
+  position: relative; z-index:10; /* ensures clickable */
+}
+.btn:hover { transform:translateY(-3px); box-shadow:0 6px 12px rgba(255,68,68,0.5); }
+
+/* Mobile */
+@media(max-width:700px){
+  .path-grid { flex-direction:column; align-items:center; }
+  .path-card { width:90%; max-width:260px; }
+}
+
+</style>
+
